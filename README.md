@@ -10,7 +10,7 @@ A home lab for building and testing threat detections, mapped to MITRE ATT&CK.
 
 ## Stack
 - **SIEM:** Splunk Enterprise
-- **Endpoint telemetry:** Sysmon (SwiftOnSecurity config) and Windows Event Logs
+- **Endpoint telemetry:** Sysmon v15.22 (SwiftOnSecurity config) and Windows Event Logs
 - **Forwarding:** Splunk Universal Forwarder
 - **Environment:** VirtualBox, Active Directory domain (`lab.local`)
 
