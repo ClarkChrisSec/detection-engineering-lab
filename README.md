@@ -4,6 +4,10 @@
 
 A home lab for building and testing threat detections, mapped to MITRE ATT&CK.
 
+<img width="700" alt="lab architecture: domain controller forwards Sysmon and Windows logs to Splunk over an internal network" src="https://github.com/user-attachments/assets/894183a3-d3dc-413c-bb81-26e45b0d9b14" />
+
+*The lab: the domain controller forwards sysmon and Windows Event Logs to Splunk, which runs two scheduled alerts. Workstation01 is planned.*
+
 ## Stack
 - **SIEM:** Splunk Enterprise
 - **Endpoint telemetry:** Sysmon (SwiftOnSecurity config) and Windows Event Logs
