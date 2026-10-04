@@ -22,4 +22,4 @@ A home lab for building and testing threat detections, mapped to MITRE ATT&CK.
 - [ATT&CK coverage tracker](coverage.md)
 - [Detections](detections/)
 
-- [Roadmap] (ROADMAP.md)
+- [Roadmap](ROADMAP.md)
