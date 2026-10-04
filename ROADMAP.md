@@ -12,7 +12,7 @@ This project is a work in progress. This page tracks what's done and what's next
 - [x] Screenshots added showing each detection and alert firing
 
 ## In progress
-- [ ] Lab architecture diagram
+- [x] Lab architecture diagram
 - [ ] More ATT&CK detections (account discovery, scheduled tasks, local account creation, brute force)
 - [ ] Forwarder on Workstation01
 
