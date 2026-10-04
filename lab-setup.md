@@ -7,7 +7,7 @@
 | Domain Controller | Active Directory (`lab.local`) | Windows Server 2022 |
 | Workstation01 | Domain-joined endpoint | Windows 11 Enterprise |
 
-<img width="800" alt="lab  virtual machines running in VirtualBox" src="https://github.com/user-attachments/assets/60566d68-b6f3-41a2-8dc4-d7554ffa53a5" />
+<img width="800" alt="lab virtual machines running in VirtualBox" src="https://github.com/user-attachments/assets/60566d68-b6f3-41a2-8dc4-d7554ffa53a5" />
 
 *The three lab VMs running in VirtualBox: the Splunk SIEM, the domain controller, and a Windows 11 workstation.*
 
@@ -15,8 +15,8 @@
 All VMs share an internal network (`LAB-INT`, 192.168.56.0/24) with static IPs.
 
 ## Data pipeline
-- Sysmon and the Splunk Universal Forwarder are running on the domain controller (Workstation01 is planned)
-- Splunk Universal Forwarder sends Windows Event Logs and Sysmon events to Splunk
+- Sysmon and the Splunk Universal Forwarder run on the domain controller (Workstation01 is planned)
+- The forwarder sends Windows Event Logs and Sysmon events to Splunk
 - Two indexes: `sysmon` and `wineventlog`
 
 <img width="800" alt="splunk indexes sysmon and wineventlog with event counts" src="https://github.com/user-attachments/assets/d1713b57-bb77-4a5f-9305-92367a5109f3" />
