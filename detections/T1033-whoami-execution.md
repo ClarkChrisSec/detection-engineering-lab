@@ -24,6 +24,11 @@ Ran `whoami` from an elevated PowerShell session on the Windows host. The event 
 
 *The Sysmon process creation event behind the detection. `Image` and `CommandLine` identify the binary, `ParentImage` shows PowerShell launched it, and `User` holds two values.*
 
+## Limitations
+
+- The rule only fires when `whoami.exe` runs. Other ways to learn the current user, such as `echo %USERNAME%` in cmd or `$env:USERNAME` in PowerShell, never start that process and would not be caught.
+- It depends on Sysmon process creation (EventCode 1) being logged on the host.
+
 ## False positives
 Admins and scripts run `whoami` legitimately. In a real environment, tune by parent process and user, and alert on unusual parents (such as Office apps or web servers).
 
