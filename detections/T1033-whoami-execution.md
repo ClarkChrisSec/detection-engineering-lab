@@ -19,10 +19,14 @@ Ran `whoami` from an elevated PowerShell session on the Windows host. The event 
 
    *Splunk detecting `whoami.exe` launched from PowerShell on the domain controller. For this screenshot I added a host filter and a PowerShell parent filter to the rule so it shows just this one test run.*
 
+## What the event looks like
+<img width="700" alt="Expanded Sysmon process creation event showing CommandLine, Image, ParentImage, and User fields" src="https://github.com/user-attachments/assets/90707471-7dab-4445-8691-42c1c5c4123e" />
+
+*The Sysmon process creation event behind the detection. `Image` and `CommandLine` identify the binary, `ParentImage` shows PowerShell launched it, and `User` holds two values.*
+
 ## False positives
 Admins and scripts run `whoami` legitimately. In a real environment, tune by parent process and user, and alert on unusual parents (such as Office apps or web servers).
 
-
 ## Notes
 
-**About `NOT_TRANSLATED` in the User field:** In my Splunk results the `User` field shows `NOT_TRANSLATED` in front of `LAB\Administrator`. The account that ran the command is `LAB\Administrator`. The prefix appears to come from how the forwarder resolves the account name, and it doesn't change the detection. The rule matches on the process (`Image` / `OriginalFileName`) rather than the user. If a future rule filters on `User`, it will need to account for the prefix.
+**About `NOT_TRANSLATED` in the User field:** In my Splunk results the `User` field is multivalued. It holds two values for the same event: `NOT_TRANSLATED` and `LAB\Administrator`. The account that ran the command is `LAB\Administrator`. Because the field has two values, a search such as `User="LAB\\Administrator"` still matches, but a table column shows both values stacked. This rule matches on the process (`Image` / `OriginalFileName`), so it isn't affected.
