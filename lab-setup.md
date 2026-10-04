@@ -15,7 +15,7 @@
 All VMs share an internal network (`LAB-INT`, 192.168.56.0/24) with static IPs.
 
 ## Data pipeline
-- Sysmon installed on Windows hosts with the SwiftOnSecurity config
+- Sysmon and the Splunk Universal Forwarder are running on the domain controller (Workstation01 is planned)
 - Splunk Universal Forwarder sends Windows Event Logs and Sysmon events to Splunk
 - Two indexes: `sysmon` and `wineventlog`
 
