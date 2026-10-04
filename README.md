@@ -1,5 +1,7 @@
 # Detection Engineering Lab
 
+> **Status:** Work in progress. See the [roadmap](ROADMAP.md) for what's done and what's coming.
+
 A home lab for building and testing threat detections, mapped to MITRE ATT&CK.
 
 ## Stack
