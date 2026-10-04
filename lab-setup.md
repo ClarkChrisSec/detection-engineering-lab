@@ -56,3 +56,8 @@ index = sysmon
 <img width="600" alt="inputs.conf open in Notepad showing four WinEventLog stanzas and their index settings" src="https://github.com/user-attachments/assets/c485e3c3-c879-4b83-8f7c-6c1fc0347279" />
 
 *The forwarder's `inputs.conf` on the Windows host, routing Sysmon events to the `sysmon` index and Application, Security, and System logs to `wineventlog`.*
+
+## Sysmon logging notes
+- Process creation is logged in exclude mode: everything is recorded except entries the config filters as noise.
+- Network connections and DNS lookups are enabled.
+- Image (DLL) loading is disabled, so detections that depend on it need a config change first.
