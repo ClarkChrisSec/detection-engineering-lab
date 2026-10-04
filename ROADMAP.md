@@ -10,9 +10,9 @@ This project is a work in progress. This page tracks what's done and what's next
 - [x] Detections saved as Splunk reports
 - [x] Scheduled alerts running for both detections (every 5 minutes, Triggered Alerts)
 - [x] Screenshots added showing each detection and alert firing
+- [x] Lab architecture diagram
 
 ## In progress
-- [x] Lab architecture diagram
 - [ ] More ATT&CK detections (account discovery, scheduled tasks, local account creation, brute force)
 - [ ] Forwarder on Workstation01
 
