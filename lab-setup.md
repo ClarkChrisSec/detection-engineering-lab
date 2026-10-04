@@ -12,7 +12,14 @@
 *The three lab VMs running in VirtualBox: the Splunk SIEM, the domain controller, and a Windows 11 workstation.*
 
 ## Network
-The VMs connect over an internal VirtualBox network named `LAB-INT` (192.168.56.0/24). The domain controller uses 192.168.56.10 and the Splunk server uses 192.168.56.12. The domain controller and the Splunk VM also have a NAT adapter for internet access.
+The VMs connect over an internal VirtualBox network named `LAB-INT` (192.168.56.0/24).
+
+| VM | Internal address |
+|---|---|
+| Domain Controller | 192.168.56.10 |
+| SIEM-Splunk | 192.168.56.12 |
+
+The domain controller and the Splunk server also have a NAT adapter for internet access. Log forwarding from the domain controller to Splunk travels over `LAB-INT`.
 
 ## Data pipeline
 - Sysmon and the Splunk Universal Forwarder run on the domain controller (Workstation01 is planned)
